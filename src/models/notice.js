@@ -4,7 +4,7 @@ const noticeSchema = new mongoose.Schema({
     title: String,
     description: String,
     createdAt: Date,
-    Writer: String,
+    writer: String,
 });
 
 const Notice = mongoose.model("Notice", noticeSchema);

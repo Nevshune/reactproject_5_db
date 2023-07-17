@@ -18,7 +18,20 @@ export const rentalNoticeWrite = async (req, res) => {
 export const rentalNotice = async (req, res) => {
     try {
         const notices = await Notice.find({});
-        res.json({ ok: "true", notices });
+        const counts = await Notice.count();
+        res.json({ ok: "true", notices, counts });
+    } catch (error) {
+        res.json({ ok: "false", error });
+    }
+};
+
+//게시판 디테일
+
+export const reatalNoticeDetail = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const detail = await Notice.findById(id);
+        res.json({ ok: "true", detail });
     } catch (error) {
         res.json({ ok: "false", error });
     }
