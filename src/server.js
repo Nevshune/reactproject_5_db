@@ -13,6 +13,7 @@ const corsOptions = {
     origin: [
         "http://localhost:3000",
         "https://web-react-class-5th-20230703-eu1k2lll07brk9.sel4.cloudtype.app",
+        "https://sensational-dasik-fb8b11.netlify.app",
     ],
     methods: ["GET", "POST"],
     credentials: true,
