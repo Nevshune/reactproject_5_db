@@ -10,7 +10,10 @@ const PORT = 8080;
 const app = express();
 
 const corsOptions = {
-    origin: ["http://localhost:3000"],
+    origin: [
+        "http://localhost:3000",
+        "https://web-react-class-5th-20230703-eu1k2lll07brk9.sel4.cloudtype.app",
+    ],
     methods: ["GET", "POST"],
     credentials: true,
 };
