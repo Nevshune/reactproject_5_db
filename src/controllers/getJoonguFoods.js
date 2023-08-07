@@ -9,6 +9,3 @@ export const getJoonguFoods = async (req, res) => {
             res.send(data);
         });
 };
-// export cosnt getJoonguFoods = async(req, res) => {
-//     console.log("api")
-// }
