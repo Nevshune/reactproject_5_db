@@ -5,6 +5,7 @@ import morgan from "morgan";
 import rentalRouter from "./routers/rentalRouter.js";
 import cors from "cors";
 import foodsRouter from "./routers/foodsRouter.js";
+import userRouter from "./routers/userRouter.js";
 
 const PORT = 8080;
 const app = express();
@@ -15,6 +16,7 @@ const corsOptions = {
         "https://web-react-class-5th-20230703-eu1k2lll07brk9.sel4.cloudtype.app",
         "https://sensational-dasik-fb8b11.netlify.app",
     ],
+
     methods: ["GET", "POST"],
     credentials: true,
 };
@@ -26,6 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/api/rental", rentalRouter);
 app.use("/api/foods", foodsRouter);
+app.use("/api/users", userRouter);
 
 // app.get("/test", function (req, res) {
 //     res.json({ ok: "안녕하세요" });
